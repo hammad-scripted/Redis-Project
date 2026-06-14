@@ -31,7 +31,7 @@ export async function connectRedis(){
     if(!redis.isOpen){
         await redis.connect();
     }
-    console.log(`Redis client ping:`, redis.ping());
+    console.log(`Redis client ping:`, await redis.ping());
 }
 
 export async function disconnectRedis(){
